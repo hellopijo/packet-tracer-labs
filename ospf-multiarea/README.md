@@ -34,7 +34,7 @@ Using this LSDB as a map, each router runs Dijkstra's algorithm placing itself a
 | PC-C | FA0 | 10.20.3.3/24 | 255.255.255.0 | 20 |
 
 ## What i done?
-Basically what i done is configuring OSPF for all these routers. I used multiarea to reduce the loads that need to be handle by each routers by separate it to 3 area (area 0, area 10, area 20). R1 and R4 works as ABR (Area Border Router) which connect one or more areas to the OSPF backbone. Every router be assigned router id based on its names as example, `R1 - 1.1.1.1` . 
+I implemented multi-area OSPF across the network to reduce router overhead by segmenting it into Area 0, Area 10, and Area 20. R1 and R4 act as Area Border Routers (ABRs) to connect these areas back to the backbone. For easy identification, each router is assigned a unique Router ID based on its name, such as 1.1.1.1 for R1.
 
 ## Results
 

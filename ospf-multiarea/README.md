@@ -1,6 +1,10 @@
 # OSPF Multiarea Labs
 
-This lab are to demonstrated how OSPF for multi-area use cases.
+OSPF is a link-state routing protocol that uses the Shortest Path First (SPF) / Dijkstra's algorithm to prevent routing loops and calculate the most efficient paths.
+
+Each router advertises its local link states via Link-State Advertisements (LSAs), which are flooded throughout the area so every node can construct an identical Link-State Database (LSDB) representing the entire network topology.
+
+Using this LSDB as a map, each router runs Dijkstra's algorithm placing itself as the root vertex (V0​) to calculate a loop-free, shortest-path tree based on the cumulative link cost (where Cost=Interface BandwidthReference Bandwidth​), injecting the optimal routes into the routing table.
 
 
 ## Network Topology
@@ -28,3 +32,14 @@ This lab are to demonstrated how OSPF for multi-area use cases.
 | PC-A | FA0 | 10.10.2.2/24 | 255.255.255.0 |
 | PC-B | FA0 | 10.20.3.2/24 | 255.255.255.0 |
 | PC-C | FA0 | 10.20.3.3/24 | 255.255.255.0 |
+
+## What i done?
+Basically what i done is configuring OSPF for all these routers. I used multiarea to reduce the loads that need to be handle by each routers by separate it to 3 area (area 0, area 10, area 20). R1 and R4 works as ABR (Area Border Router) which connect one or more areas to the OSPF backbone. Every router be assigned router id based on its names as example, `R1 - 1.1.1.1` .
+
+## Results
+
+<img width="729" height="128" alt="image" src="https://github.com/user-attachments/assets/ecd0bb53-3095-469a-825b-d2b4320656f3" />
+
+<img width="728" height="114" alt="image" src="https://github.com/user-attachments/assets/a54fce7d-b603-46cf-bb4c-020fab67674a" />
+
+<img width="728" height="114" alt="image" src="https://github.com/user-attachments/assets/273983fb-1ce0-4b5a-b3fb-1b399ba9a705" />

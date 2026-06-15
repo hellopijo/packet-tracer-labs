@@ -1,6 +1,6 @@
 # OSPF Multiarea Labs
 
-This lab are to demonstrated how OSPF for multiarea use cases.
+This lab are to demonstrated how OSPF for multi-area use cases.
 
 
 ## Network Topology

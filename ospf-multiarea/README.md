@@ -5,8 +5,10 @@ This lab are to demonstrated how OSPF for multiarea use cases.
 
 ## Network Topology
 
-[]
+![Image](https://github.com/hellopijo/packet-tracer-labs/blob/main/ospf-multiarea/ospf_topology)
 
+
+## IP Tables
 | Device | Interfaces | IP Address | Subnet Mask |
 | --- | --- | --- | --- |
 | R1 | G0/0 | 10.10.1.1/30 | 255.255.255.252 |
